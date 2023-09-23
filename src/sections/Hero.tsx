@@ -17,12 +17,12 @@ const Hero = () => {
         <p className="text-xl text-coral-red font-montserrat">
           Our Summer Collection
         </p>
-        <h1 className="mt-10 font-palanquin text-8xl max-sm:text=[72px] font-bold">
-          <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
+        <h1 className="mt-10 font-palanquin text-8xl max-sm:text=[72px] font-bold z-10">
+          <span className="xl:bg-white xl:whitespace-nowrap relative pr-10">
             The New Arrival
           </span>
           <br />
-          <span className="text-coral-red inline-block mt-3 mr-4">Nike </span>
+          <span className="text-coral-red inline-block mt-3 mr-4 animate-slideLeft">Nike </span>
           Shoes
         </h1>
         <p className="font-montserrat text-slate-gray text-lg leading-8 mt-8 mb-14 sm:max-w-sm">
@@ -49,7 +49,7 @@ const Hero = () => {
           height={500}
           className="object-contain relative z-10"
         />
-        <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
+        <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6 ">
           {shoes.map((shoe) => (
             <div key={shoe.bigShoe}>
               <ShoeCard

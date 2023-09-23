@@ -21,10 +21,10 @@ const ShoeCard = ({ imageURL, changeBigShoeImage, bigShoeImage }: Props) => {
         bigShoeImage === imageURL.bigShoe
           ? "border-coral-red"
           : "border-transparent"
-      } cursor-pointer max-sm:flex-1`}
+      } cursor-pointer max-sm:flex-1 hover:animate-heartbeat`}
       onClick={handleClick}
     >
-      <div className="flex items-center justify-center bg-card bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-4">
+      <div className="flex items-center justify-center bg-card bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-4 ">
         <img
           src={imageURL.thumbnail}
           alt="shoe collection"

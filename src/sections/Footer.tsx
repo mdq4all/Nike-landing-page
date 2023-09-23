@@ -39,8 +39,8 @@ const Footer = () => {
       </div>
       <div className="flex text-white-400 mt-24 max-sm:flex-col max-sm:items-center">
         <div className="flex flex-1 justify-between flex-wrap items-center gap-2 font-montserrat cursor-pointer ">
-          <p><span className="text-xl text-center max-sm:w-full">&copy; </span>Copywright. All rights reserved.</p>  
-          <p className="font-montserrat cursor-pointer text-center max-sm:w-full">Terms & Conditions</p>
+          <p><span className="text-xl max-sm:w-full">&copy; </span>Copywright. All rights reserved.</p>  
+          <p className="font-montserrat cursor-pointer max-sm:w-full">Terms & Conditions</p>
         </div>
       </div>
     </footer>

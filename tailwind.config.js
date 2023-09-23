@@ -37,6 +37,10 @@ export default {
       },
       screens: {
         "wide": "1440px"
+      },
+      animation: {
+        'heartbeat': 'heartbeat 1.5s ease-in-out infinite both',
+        'slideLeft': 'slideLeft 1s ease-in-out 0s 1 normal forwards;'
       }
     },
   },
