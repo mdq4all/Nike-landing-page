@@ -1,6 +1,27 @@
+import { useInView, animated } from "@react-spring/web";
 import { shoe8 } from "../assets/images";
 import Button from "../components/Button";
+
+
 const SuperQuality = () => {
+
+  const [ref, springs] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        x: 200,
+      },
+      to: {
+        opacity: 1,
+        x: 0,
+      },
+    }),
+    {
+      rootMargin: "-30% 0%",
+      once:true,
+    }
+  );
+
   return (
     <section
       id="about-us"
@@ -25,9 +46,17 @@ const SuperQuality = () => {
           <Button label="View Details" iconURL="" />
         </div>
       </div>
-      <div className="flex-1 flex justify-center items-center">
-        <img src={shoe8} alt="shoe super quality" width={570} height={522} className="object-contain" />
-      </div>
+      <animated.div ref={ref} style={springs}>
+        <div className="flex-1 flex justify-center items-center">
+          <img
+            src={shoe8}
+            alt="shoe super quality"
+            width={570}
+            height={522}
+            className="object-contain"
+          />
+        </div>
+      </animated.div>
     </section>
   );
 };

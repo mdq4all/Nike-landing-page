@@ -4,10 +4,9 @@ import { bigShoe1 } from "../assets/images";
 import { shoes, statistics } from "../constants";
 import { Button, ShoeCard } from "./index";
 
-
 const Hero = () => {
-
-    const[bigShoeImg, setBigShoeImg] = useState<string>(bigShoe1)
+  const [bigShoeImg, setBigShoeImg] = useState<string>(bigShoe1);
+ 
   return (
     <section
       id="home"
@@ -22,7 +21,9 @@ const Hero = () => {
             The New Arrival
           </span>
           <br />
-          <span className="text-coral-red inline-block mt-3 mr-4 animate-slideLeft">Nike </span>
+          <span className="text-coral-red inline-block mt-3 mr-4 animate-slideLeft">
+            Nike{" "}
+          </span>
           Shoes
         </h1>
         <p className="font-montserrat text-slate-gray text-lg leading-8 mt-8 mb-14 sm:max-w-sm">
@@ -49,17 +50,19 @@ const Hero = () => {
           height={500}
           className="object-contain relative z-10"
         />
-        <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6 ">
-          {shoes.map((shoe) => (
-            <div key={shoe.bigShoe}>
-              <ShoeCard
-                imageURL={shoe}
-                changeBigShoeImage={() => {setBigShoeImg(shoe.bigShoe)}}
-                bigShoeImage={bigShoeImg}
-              />
-            </div>
-          ))}
-        </div>
+          <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6 ">
+            {shoes.map((shoe) => (
+              <div key={shoe.bigShoe}>
+                <ShoeCard
+                  imageURL={shoe}
+                  changeBigShoeImage={() => {
+                    setBigShoeImg(shoe.bigShoe);
+                  }}
+                  bigShoeImage={bigShoeImg}
+                />
+              </div>
+            ))}
+          </div>
       </div>
     </section>
   );
